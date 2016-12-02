@@ -45,14 +45,6 @@ class DynLexState
     public $column;
 
     /**
-     * Indicates whether the current rule shall be rejected or not.
-     * If rejected, the lexer will attempt to match a different rule.
-     *
-     * @var boolean
-     */
-    public $reject;
-
-    /**
      * Stores states are required by the user.
      *
      * @var array
@@ -66,7 +58,6 @@ class DynLexState
     {
         $this->line = 1;
         $this->column = 1;
-        $this->reject = false;
 
         $this->stack = [];
     }

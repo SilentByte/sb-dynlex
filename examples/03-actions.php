@@ -25,8 +25,8 @@
 
 require_once './../vendor/autoload.php';
 
-use SilentByte\DynLex\DynLexUtils;
 use SilentByte\DynLex\DynLexBuilder;
+use SilentByte\DynLex\DynLexUtils;
 
 // ---------------------------------------------------
 // Count words and numbers in the input using actions.
@@ -48,7 +48,7 @@ $lexer = (new DynLexBuilder())
     // Skip and ignore all other character sequences.
     ->skip('.')
 
-    // Build the lexer based on the given ruleset.
+    // Build the lexer based on the given rule set.
     ->build();
 
 $tokens = $lexer->collect($input);

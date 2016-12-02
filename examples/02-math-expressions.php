@@ -25,8 +25,8 @@
 
 require_once './../vendor/autoload.php';
 
-use SilentByte\DynLex\DynLexUtils;
 use SilentByte\DynLex\DynLexBuilder;
+use SilentByte\DynLex\DynLexUtils;
 
 // ----------------------------------------------------------------------------
 // Scan a mathematical expression and tokenize integers, floats, and operators.
@@ -51,7 +51,7 @@ $lexer = (new DynLexBuilder())
     ->newline('\n')
     ->skip('\s')
 
-    // Build the lexer based on the given ruleset.
+    // Build the lexer based on the given rule set.
     ->build();
 
 $tokens = $lexer->collect($input);

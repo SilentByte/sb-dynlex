@@ -25,8 +25,8 @@
 
 require_once './../vendor/autoload.php';
 
-use SilentByte\DynLex\DynLexUtils;
 use SilentByte\DynLex\DynLexBuilder;
+use SilentByte\DynLex\DynLexUtils;
 
 // -----------------------------------------------------------------
 // Create a simple syntax highlighter for parts of the PHP language.

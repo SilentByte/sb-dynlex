@@ -95,14 +95,28 @@ class DynLexLexer
                     $token = new DynLexToken($rule, $text, $matches,
                         $inputOffset, $state->line, $state->column);
 
-                    if($rule->action() && $rule->action()($token, $state)) {
-                        // Halt scanning if the user requested aborting the process.
-                        return;
+                    if($rule->action()) {
+                        $actionResult = $rule->action()($token, $state);
+                        if($actionResult === DynLexAction::HALT) {
+                            // Halt scanning if the user requested aborting the process.
+                            return;
+                        }
+                        else if($actionResult === DynLexAction::REJECT) {
+                            // Try matching next rule.
+                            continue;
+                        }
                     }
 
-                    if($callback && $callback($token, $state)) {
-                        // Halt scanning if the user requested aborting the process.
-                        return;
+                    if($callback) {
+                        $actionResult = $callback($token, $state);
+                        if($actionResult === DynLexAction::HALT) {
+                            // Halt scanning if the user requested aborting the process.
+                            return;
+                        }
+                        else if($actionResult === DynLexAction::REJECT) {
+                            // Try matching next rule.
+                            continue;
+                        }
                     }
 
                     $textLength = strlen($text);
@@ -116,16 +130,8 @@ class DynLexLexer
                         $state->column += $textLength;
                     }
 
-                    if($state->reject) {
-                        $state->reject = false;
-
-                        // Try matching next rule.
-                        continue;
-                    }
-                    else {
-                        // Match has been accepted, continue scanning.
-                        continue 2;
-                    }
+                    // Rule has been accepted, continue scanning.
+                    continue 2;
                 }
             }
 

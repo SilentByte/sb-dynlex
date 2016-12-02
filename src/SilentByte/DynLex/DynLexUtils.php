@@ -28,7 +28,7 @@ namespace SilentByte\DynLex;
 /**
  * Defines useful helper functions.
  */
-class DynlexUtils
+class DynLexUtils
 {
     /**
      * Disallow the instantiation of objects as this is a static class.

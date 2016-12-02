@@ -23,33 +23,36 @@
 //// SOFTWARE.
 ////
 
-require_once './../vendor/autoload.php';
+namespace SilentByte\DynLex;
 
-use SilentByte\DynLex\DynLexBuilder;
-use SilentByte\DynLex\DynLexUtils;
+/**
+ * Defines valid state actions that are used as return values
+ * from lexer action functions.
+ */
+final class DynLexAction
+{
+    /**
+     * Accepts the match and produces the token.
+     */
+    const ACCEPT = null;
 
-// -------------------------------------------------
-// Tokenize words and numbers, ignoring white space.
-// -------------------------------------------------
+    /**
+     * Halts the scanning process, no further tokens will be matched.
+     */
+    const HALT  = 1;
 
-// Define the input string.
-$input = "Hello world 8273 this 919 28 is a 12 39 44 string\n"
-    . "consisting of 328 words 003 and numbers 283";
+    /**
+     * Rejects the current match and continues with the next rule.
+     */
+    const REJECT = 2;
 
-$lexer = (new DynLexBuilder())
-    // Define the rules for words and numbers.
-    ->rule('[a-zA-z]+', 'word')
-    ->rule('[0-9]+',    'number')
-
-    // Skip end-of-line characters and white space.
-    // As '\n' is more specific than '\s', it must be specified first.
-    ->newline('\n')
-    ->skip('\s')
-
-    // Build the lexer based on the given rule set.
-    ->build();
-
-$tokens = $lexer->collect($input);
-DynLexUtils::dumpTokens($tokens);
+    /**
+     * Disallow the instantiation of objects as this is a static class.
+     */
+    private function __construct()
+    {
+        //
+    }
+}
 
 ?>
