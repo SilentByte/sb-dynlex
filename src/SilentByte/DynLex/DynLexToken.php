@@ -106,5 +106,3 @@ class DynLexToken
         $this->column = $column;
     }
 }
-
-?>

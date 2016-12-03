@@ -100,5 +100,3 @@ class DynLexState
         return end($this->stack);
     }
 }
-
-?>

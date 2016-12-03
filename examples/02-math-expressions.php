@@ -56,5 +56,3 @@ $lexer = (new DynLexBuilder())
 
 $tokens = $lexer->collect($input);
 DynLexUtils::dumpTokens($tokens);
-
-?>

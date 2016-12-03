@@ -131,5 +131,3 @@ class DynLexRule
         return $this->newline;
     }
 }
-
-?>
