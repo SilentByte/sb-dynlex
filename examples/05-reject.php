@@ -60,5 +60,3 @@ $lexer->scan($input);
 // However, counter $plane will show 9 as the word 'plane' is also contained in 'airplane'.
 echo "$airplane 'airplane' found.\n";
 echo "$plane 'plane' found.\n";
-
-?>

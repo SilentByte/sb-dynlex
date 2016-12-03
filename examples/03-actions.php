@@ -56,5 +56,3 @@ DynLexUtils::dumpTokens($tokens);
 
 echo "$words words found.\n";
 echo "$numbers numbers found.\n";
-
-?>

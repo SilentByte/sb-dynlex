@@ -134,5 +134,3 @@ class DynLexBuilder
         return new DynLexLexer(array_merge($this->rules, [$this->defaultRule]));
     }
 }
-
-?>
