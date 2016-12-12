@@ -38,6 +38,13 @@ class DynLexToken
     public $rule;
 
     /**
+     * Gets the tag of the matching rule for this token.
+     *
+     * @var any
+     */
+    public $tag;
+
+    /**
      * Stores the text that has been matched.
      *
      * @var string
@@ -98,6 +105,7 @@ class DynLexToken
     public function __construct($rule, $text, $matches, $offset, $line, $column)
     {
         $this->rule = $rule;
+        $this->tag = $rule->tag();
         $this->text = $text;
         $this->value = $text;
         $this->matches = $matches;
