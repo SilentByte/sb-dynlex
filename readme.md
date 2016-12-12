@@ -103,7 +103,7 @@ It is generally advised to check out the `examples` folder for further informati
 ## FAQ
 
 ### Under what license is DynLex released?
-MIT license. Check out `license.txt` and the following section. More information regarding the MIT license can be found here: <https://opensource.org/licenses/MIT>
+MIT license. Check out `license.txt` for details. More information regarding the MIT license can be found here: <https://opensource.org/licenses/MIT>
 
 ### Why do rules sometimes not get matched correctly?
 You have to ensure that rules that may conflict with each other are listed in the correct order from most specific to most general. For example, if you want to tokenize integers (`[0-9]+`) and floats (`[0-9]+\.[0-9]+`), the rule for floats must be listed before the rule for integers because the integer rule matches the first part of the float rule.
