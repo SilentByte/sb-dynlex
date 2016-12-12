@@ -15,5 +15,8 @@
     "autoload": {
         "psr-4": {"SilentByte\\DynLex\\": "src/SilentByte/DynLex"}
     },
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.7.*"
+    }
 }
