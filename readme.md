@@ -1,6 +1,9 @@
 
 DynLex Dynamically Configurable Lexer Library
 =============================================
+[![Build Status](https://travis-ci.org/SilentByte/sb-dynlex.svg?branch=master)](https://travis-ci.org/SilentByte/sb-dynlex)
+[![Latest Stable Version](http://img.shields.io/packagist/v/silentbyte/sb-dynlex.svg)](https://packagist.org/packages/silentbyte/sb-dynlex)
+[![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://opensource.org/licenses/MIT)
 
 This is the main repository of the SilentByte DynLex Lexer Library.
 
