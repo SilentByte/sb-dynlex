@@ -1,6 +1,9 @@
 
 DynLex Dynamically Configurable Lexer Library
 =============================================
+[![Build Status](https://travis-ci.org/SilentByte/sb-dynlex.svg?branch=master)](https://travis-ci.org/SilentByte/sb-dynlex)
+[![Latest Stable Version](http://img.shields.io/packagist/v/silentbyte/sb-dynlex.svg)](https://packagist.org/packages/silentbyte/sb-dynlex)
+[![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://opensource.org/licenses/MIT)
 
 This is the main repository of the SilentByte DynLex Lexer Library.
 
@@ -98,6 +101,10 @@ echo "$numbers numbers found.\n";
 Using this concept, it is possible to easily create lexers for different kinds of applications. A more elaborate example that demonstrates how to use DynLex to create HTML syntax highlighters for programming languages can be found under `examples/04-syntax-highlighting.php`.
 
 It is generally advised to check out the `examples` folder for further information and examples on how to use DynLex. Also have a look into the source code for more detailed documentation.
+
+
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
 ## FAQ
