@@ -103,6 +103,10 @@ Using this concept, it is possible to easily create lexers for different kinds o
 It is generally advised to check out the `examples` folder for further information and examples on how to use DynLex. Also have a look into the source code for more detailed documentation.
 
 
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
 ## FAQ
 
 ### Under what license is DynLex released?
