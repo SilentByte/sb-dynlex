@@ -9,6 +9,8 @@ This is the main repository of the SilentByte DynLex Lexer Library.
 
 DynLex is an easy-to-use library for PHP that provides the functionality to create and use dynamically configurable lexers accessed via a fluid interface.
 
+Official documentations can be found here: <http://docs.silentbyte.com/dynlex>
+
 
 ## Installation
 
