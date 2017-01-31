@@ -1,3 +1,6 @@
-/vendor/
+vendor/
+docs/
+.sami/
+
 *.test.php
 *.sublime-workspace
