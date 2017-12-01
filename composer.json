@@ -2,22 +2,26 @@
     "name": "silentbyte/sb-dynlex",
     "description": "A dynamically configurable lexer library featuring a fluid API.",
     "keywords": ["lexer", "lex", "flex", "parser", "language"],
-	"homepage": "https://github.com/SilentByte/sb-dynlex",
+    "homepage": "https://github.com/SilentByte/sb-dynlex",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Rico Beti",
             "email": "rico.beti@silentbyte.com",
-			"homepage": "https://silentbyte.com/"
+            "homepage": "https://silentbyte.com/"
         }
     ],
-    "autoload": {
-        "psr-4": {"SilentByte\\DynLex\\": "src/SilentByte/DynLex"}
+    "require": {
+        "php": "^7.0"
     },
-    "require": {},
     "require-dev": {
-        "phpunit/phpunit": "5.7.*",
+        "phpunit/phpunit": "^6.4",
         "sami/sami": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SilentByte\\DynLex\\": "src/SilentByte/DynLex"
+        }
     }
 }
